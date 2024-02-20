@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeatureModule } from './feature/feature.module';
 
@@ -11,7 +11,7 @@ import { FeatureModule } from './feature/feature.module';
   imports: [RouterOutlet, FormsModule, HttpClientModule ,NgbRatingModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  
+
 })
 export class AppComponent {
   title = 'project';

@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AuthService } from '../auth.service';
 import { Route, Router } from '@angular/router';
+import { AuthGuard } from '../auth.guard';
 
 @Component({
   selector: 'app-login',
@@ -22,23 +23,23 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  login(){
-      if(this.username.trim().length ===0){
-        this.error = 'Username is required!'
-      }
-      else if(this.password.trim().length ===0){
-        this.password = 'Password is required!'
-      }
-      else{
+
+  login() {
+    if (this.username.trim().length === 0) {
+        this.error = 'Username is required!';
+    } else if (this.password.trim().length === 0) {
+        this.error = 'Password is required!';
+    } else {
         this.error = '';
 
         let res = this.auth.login(this.username, this.password);
-        if(res === 200){
-          this.router.navigate(['home'])
+        localStorage.setItem('token', Math.random().toString());
+        if (res === 200) {
+            this.router.navigate(['home']);
         }
-        if(res === 403){
-          this.error = 'Invalid credentials!'
+        if (res === 403) {
+            this.error = 'Invalid credentials!';
         }
-      }
+    }
   }
 }

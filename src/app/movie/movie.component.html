@@ -1,1 +1,62 @@
 <app-header></app-header>
+<div class="movie-container">
+  <div class="top">
+    <div class="left">
+      <div class="name">{{notmovie?.name}}</div>
+      <div class="rating">
+        <app-star-rating [rating]="notmovie?.rating" [isReadOnly]="true"></app-star-rating>
+        <span class="rating-value">{{notmovie?.rating}}</span>
+      </div>
+      <div class="cover">
+        <img [src]="notmovie?.cover" alt="movie">
+      </div>
+    </div>
+    <div class="right">
+        <div class="title">Rate this movie</div>
+        <div class="rating-form">
+          <div class="form-group">
+            <label for="uname">Name</label>
+            <input type="text" name="uname" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="rating" class="rate">Rating</label>
+            <!-- <app-star-rating [rating]="0" [isReadOnly]="false"></app-star-rating> -->
+            <div class="rating">
+            <app-star-rating [rating]="0" [isReadOnly]="false"></app-star-rating>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="review">Review</label>
+            <textarea name="review" rows="3" class="form-control"></textarea>
+          </div>
+          <div class="btn-container">
+            <button class="btn btn-dark">Submit</button>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <h4 class="title">Reviews</h4>
+    <div class="reviews" *ngIf="notmovie?.reviews?.length >0">
+        <div class="review" *ngFor="let reviews of notmovie?.reviews">
+            <div class="review-details">
+              <div class="reivew-left">
+                <div class="author">{{reviews.rating}}</div>
+                <div class="author">{{reviews.author}}</div>
+                <div class="publish">{{reviews.published_on}}</div>
+              </div>
+              <div class="review-right">
+                <div class="rating">
+                  <app-star-rating [rating]="reviews.rating" [isReadOnly]="true"></app-star-rating>
+                  <span class="rating-value">{{reviews.rating}}</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-text"></div>
+        </div>
+    </div>
+    <div class="reviews" *ngIf="notmovie?.reviews?.length ===0">
+      <div class="no-reviews">No Reviews yet!</div>
+    </div>
+  </div>
+</div>

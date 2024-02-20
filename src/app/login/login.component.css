@@ -7,9 +7,9 @@
 }
 
 .login-container .logo {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 10px;
   position: absolute;
   top: 50px;
@@ -17,8 +17,8 @@
 }
 
 .des {
-  font-size: 34px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 5px;
   position: absolute;
   top: 200px;
