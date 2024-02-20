@@ -1,34 +1,107 @@
 .home-container{
   display : flex;
-}
+
 .all-movies{
   width : 75%;
-  min-height : calc(100vh -80px);
+  min-height : calc(100vh - 80px);
   border-right : 1px solid #fdc827;
   padding : 20px 40px;
   font-family :Arial, Helvetica, sans-serif;
+
+    .top{
+      display : flex;
+      align-items : center;
+      justify-content : space-between;
+      margin-top : 10px;
+
+      h4{
+        text-transform : uppercase;
+        font-weight : bold;
+        border-left : 5px solid #ff9900;
+        padding-left :10px;
+      }
+
+      .view-all{
+        cursor : pointer;
+        color : #ff9900;
+      }
+    }
+    .movies-thmbnail{
+      display: flex;
+      border-radius : 10px;
+      margin-bottom : 30px;
+      justify-content : space-between;
+
+    .movie{
+      .cover{
+        cursor: pointer;
+        img{
+          border-radius :10px;
+          margin-top : 10px;
+        }
+      }
+      .detail{
+        width : 180px;
+        .name{
+          font-weight : bold;
+          height : 50px;
+          margin-top : 5px;
+          cursor : pointer;
+        }
+      }
+    }
+  }
 }
 .popular-movies{
-  width :25%;
+  width :21%;
   display: flex;
   min-height : calc(100vh - 60px);
   padding : 20px 40px;
   font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-  .top{
-    display : flex;
-    align-items : center;
-    justify-content : space-between;
 
-    h4{
-      text-transform : uppercase;
-      font-weight : bold;
-      border-left : 5px solid #ff9900;
-      padding-left :10px;
+  h4{
+    text-transform : uppercase;
+    font-weight : bold;
+    border-left : 5px solid #ff9900;
+    padding-left: 10px;
+  }
+  .movies{
+    .movie{
+      margin-bottom :20px;
+      margin-top : 50px;
+      display : flex;
+      align-items : center;
+      justify-content : space-between;
+      .name{
+        font-weight : bold;
+        cursor :pointer;
+      }
+    }
+   .view-all{
+       color : #ff9900;
+       text-align : right;
+       margin-top : 20px;
+       cursor : pointer;
+    }
     }
   }
-    .view-all{
-       cursor : pointer;
-       color : #ff9900;
-    }
-
+}
+.rating {
+  padding-right: 45px;
+  position: relative;
+  .rating-value {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    font-weight: bold;
+  }
+}
+/* .star{
+  position : relative;
+  display : inline-block;
+  font-size: 30px;;
+  color : #d3d3d3;
+  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-right :3px;
+  height : 30px;
+} */

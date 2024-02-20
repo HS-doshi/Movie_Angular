@@ -1,0 +1,17 @@
+.full{
+  color:red;
+}
+.half{
+  position :absolute;
+  display : inline-block;
+  overflow :hidden;
+  color : red;
+}
+.star{
+  position : relative;
+  display : inline-block;
+  font-size : 30px;
+  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-right :3px;
+  height : 30px;
+}
