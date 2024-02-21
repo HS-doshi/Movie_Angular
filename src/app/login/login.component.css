@@ -1,64 +1,105 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Login Container */
 .login-container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(150deg, #ffe645 0%, #e2aa02 100%);
   position: relative;
-  background-color: linear-gradient(150deg, #ffe645 0%, #e2aa02 100%);
 }
 
+/* Logo */
 .login-container .logo {
-  font-size: 60px;
+  font-size: 4vw;
   font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 10px;
+  letter-spacing: 0.5vw;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 5vh;
+  right: 5vw;
 }
 
-.des {
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 5px;
+/* Film Image */
+.film {
+  width: 30vw;
   position: absolute;
-  top: 200px;
-  right: 50px;
+  top: 5vh;
+  left: 5vw;
+}
+
+/* Description */
+.des {
+  font-size: 1.5vw;
+  letter-spacing: 0.2vw;
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
   text-align: right;
-  width: 1200px;
+  width: 60vw;
+  font-family: 'Montserrat', sans-serif;
 }
-.film{
-    position : relative;
-    top : 50px;
-    left: 50px;
-    width :400px;
-}
+
+/* Login Form */
+/* .login-form {
+  width: 90%; /* Adjust width based on viewport width
+  max-width: 300px;
+  padding: 5vw; /* Adjust padding based on viewport width
+  background-color: #fff;
+  border-radius: 2vw;
+  position: absolute;
+  bottom: 5vh;
+  right: 5vw; /* Adjust right position
+  box-shadow: 2vw 2vw 8vw #383833;
+} */
 .login-form{
-  width: 500px;
-  height : 300px;
-  padding : 20px;
+  margin-right: 50px;
+  width: 400px;
+  height : 250px;
+  padding : 15px;
   background-color : #fff;
   border-radius : 10px;
   position : absolute;
-  bottom  :50px;
+  bottom  :20px;
   right : 50px;
   box-shadow : 5px 5px  20px #383833;
 }
-.form-group{
-  margin-top : 20px;
+
+
+/* Form Group */
+.form-group {
+  margin-top: 1vw;
 }
-label{
-  font-weight : bold;
-  margin-right : 10px;
+
+/* Labels */
+label {
+  font-weight: bold;
+  margin-right: 1vw;
 }
-.btn-container{
-  position  : relative;
+
+/* Button Container */
+.btn-container {
+  margin-top: 1vw;
+  position: relative;
 }
-.btn-container .btn{
-  margin-top : 30px;
+
+/* Buttons */
+.btn {
+  margin-top: 1vw;
 }
-.error{
-  position : absolute;
-  top : 32px;
-  right : 0px;
-  color:red;
+
+/* Error Messages */
+.error {
+  position: absolute;
+  top: 1vw;
+  right: -1vw;
+  color: red;
+  font-size: 1.5vw;
 }

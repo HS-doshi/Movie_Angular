@@ -30,14 +30,17 @@ export class MovieComponent implements OnInit {
 
     if(this.type === 'trending')
     {
+      this.url = ('http://localhost:4200/assets/data/trending-movies.json'),
       this.url = ('http://localhost:5000/assets/data/trending-movies.json')
     }
     if(this.type === 'theatre')
     {
+      this.url = ('http://localhost:4200/assets/data/theatre-movies.json'),
       this.url = ('http://localhost:5000/assets/data/theatre-movies.json')
     }
     if(this.type === 'popular')
     {
+        this.url =('http://localhost:4200/assets/data/popular-movies.json'),
         this.url =('http://localhost:5000/assets/data/popular-movies.json')
     }
     this.getMovie()

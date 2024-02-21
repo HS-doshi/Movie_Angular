@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
         let res = this.auth.login(this.username, this.password);
         localStorage.setItem('token', Math.random().toString());
         if (res === 200) {
+            alert('Successfully Login to Payal Studio! Thank You!')
             this.router.navigate(['home']);
         }
         if (res === 403) {

@@ -1,105 +1,121 @@
-.home-container{
-  display : flex;
-
-.all-movies{
-  width : 75%;
-  min-height : calc(100vh - 80px);
-  border-right : 1px solid #fdc827;
-  padding : 20px 40px;
-  font-family :Arial, Helvetica, sans-serif;
-
-    .top{
-      display : flex;
-      align-items : center;
-      justify-content : space-between;
-      margin-top : 10px;
-
-      h4{
-        text-transform : uppercase;
-        font-weight : bold;
-        border-left : 5px solid #ff9900;
-        padding-left :10px;
-      }
-      .view-all{
-        cursor : pointer;
-        color : #ff9900;
-      }
-    }
-    .movies-thmbnail{
-      display: flex;
-      justify-content : space-between;
-      border-radius : 10px;
-      margin-bottom : 30px;
-
-    .movie{
-      .cover{
-        cursor: pointer;
-        img{
-          border-radius :10px;
-          margin-top : 10px;
-        }
-      }
-      .detail{
-        width : 180px;
-        .name{
-          font-weight : bold;
-          height : 50px;
-          margin-top : 5px;
-          cursor : pointer;
-        }
-      }
-    }
-  }
+/* Base styles */
+.home-container {
+  display: flex;
 }
-.popular-movies{
-  width :25%;
-  min-height : calc(100vh - 80px);
-  padding : 20px 40px;
-  font-family :Arial, Helvetica, sans-serif;
 
-  h4{
-    text-transform : uppercase;
-    font-weight : bold;
-    padding-left: 5px;
-    border-left : 5px solid #ff9900;
-  }
-  .movies{
-    .movie{
-      margin-bottom:20px;
-      margin-top: 30px;
-      display: flex;
-      align-items : center;
-      justify-content : space-between;
-      .name{
-        font-weight : bold;
-        cursor :pointer;
-      }
-    }
-   .view-all{
-       color : #ff9900;
-       text-align : right;
-       margin-top : 20px;
-       cursor : pointer;
-    }
-    }
-  }
+.all-movies {
+  width: 75%;
+   /* Adjusted default height */
+  border-right: 1px solid #fdc827;
+  padding: 20px; /* Adjusted padding */
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.popular-movies {
+  width: 20%;
+  min-height: calc(35vh - 50px); /* Adjusted default height */
+  padding: 20px 10px; /* Adjusted padding */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Common styles */
+h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 5px;
+  border-left: 5px solid #ff9900;
+}
+
+/* All Movies Section */
+.all-movies .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.all-movies .top h4 {
+  font-weight: bold;
+  border-left: 5px solid #ff9900;
+  padding-left: 10px;
+}
+
+.all-movies .top .view-all {
+  cursor: pointer;
+  color: #ff9900;
+}
+
+.all-movies .movies-thmbnail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.all-movies .movie {
+  width: calc(33.33% - 10px); /* Three movies per row with spacing */
+  margin-bottom: 20px;
+}
+
+.all-movies .movie .cover img {
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 75%;
+  margin-right:auto;
+  cursor : pointer;
+}
+
+.all-movies .movie .detail {
+  width: 90%;
+}
+
+.all-movies .movie .detail .name {
+  font-weight: bold;
+  height: 40px;
+  margin-top: 5px;
+  cursor: pointer;
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Popular Movies Section */
+.popular-movies .movies .movie {
+  width: calc(33.33% - 10px); /* Three movies per row with spacing */
+  margin-bottom: 20px;
+}
+
+.popular-movies .movies .movie .name {
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.popular-movies .view-all {
+  color: #ff9900;
+  text-align: right;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Rating styles */
 .rating {
-  padding-right: 45px;
   position: relative;
-  .rating-value {
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    font-weight: bold;
+  padding-right: 30px;
+}
+
+.rating .rating-value {
+  position: absolute;
+  top: 10px;
+  left:250px;
+  font-weight: bold;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .all-movies .movie,
+  .popular-movies .movies .movie {
+    width: calc(40% - 10px); /* Two movies per row on smaller screens */
   }
 }
-/* .star{
-  position : relative;
-  display : inline-block;
-  font-size: 30px;;
-  color : #d3d3d3;
-  font-family :'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-right :3px;
-  height : 30px;
-} */
